@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    background-color: #FFF9EF;
+    color: #263653;
+    font-family: 'Nunito', 'Poppins', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka', 'Baloo 2', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-yellow {
+    @apply bg-sunshine hover:bg-sunshine-500 text-navy font-heading font-semibold px-6 py-3.5 rounded-full shadow-button-yellow transition-all duration-200 active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-blue {
+    @apply bg-skyblue hover:bg-skyblue-400 text-navy font-heading font-semibold px-6 py-3.5 rounded-full shadow-button-blue transition-all duration-200 active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-coral {
+    @apply bg-coral hover:bg-coral-500 text-white font-heading font-semibold px-6 py-3.5 rounded-full shadow-button-coral transition-all duration-200 active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2;
+  }
+
+  .btn-navy {
+    @apply bg-navy hover:bg-navy-800 text-white font-heading font-semibold px-6 py-3.5 rounded-full shadow-button-navy transition-all duration-200 active:translate-y-1 active:shadow-none inline-flex items-center justify-center gap-2;
+  }
+
+  .card-playful {
+    @apply bg-white rounded-3xl p-6 sm:p-8 border-2 border-navy/5 shadow-card hover:shadow-card-hover transition-all duration-300;
+  }
+
+  .tag-badge {
+    @apply inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider;
+  }
+}
+
+/* Custom organic clip paths & playful styling */
+.curved-edge-bottom {
+  clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.wavy-border {
+  border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9EF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #FFD66B;
+  border-radius: 9999px;
+  border: 2px solid #FFF9EF;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F5BE38;
+}
